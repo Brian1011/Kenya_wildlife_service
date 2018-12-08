@@ -41,3 +41,7 @@ Route::get('/student/student_detail/{id}','studentController@show_student_info')
 Route::get('/student/search_student','studentController@search_student');
 
 // Route::resource('model', 'controller');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -40,10 +40,8 @@ class studentController extends Controller
         $student = student::find($student_id)->fees;//relationship
         $student_name = student::find($student_id)->full_name;
         return view('brian_mutinda/student_info',['student'=>$student,'student_name'=>$student_name,'student_id'=>$student_id]);
-        
     }
 
-    
     //search for a student and return fees payment
     public function search_student(Request $request){
         //check if student exists in the database
