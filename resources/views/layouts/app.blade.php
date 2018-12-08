@@ -29,13 +29,33 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Kenya Wildlife Service
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
+                        @guest
+
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Animals <span class="caret"></span></a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">New Animal Specie</a> </li>
+                                    <li><a href="#">View Animals</a> </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mammals <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Enter Mammal Information</a></li>
+                                    <li><a href="#">View Mammals Info</a></li>
+                                </ul>
+                            </li>
+                        @endguest
                         &nbsp;
                     </ul>
 

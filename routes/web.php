@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('brian_mutinda/index');
+
+Route::get('/',function (){
+   return view('welcome') ;
 });
+
+/*This was for a lab session*/
 
 /*Go to the fees page*/
 Route::get('/fees',function (){
