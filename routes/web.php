@@ -10,13 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
+/*
+Route::get('/newanimal',function (){
+    return view('kws/newanimal');
+});
+*/
+Route::get('/newanimal','AnimalController@index');
+Route::post('/animal/save','AnimalController@store');
 Route::get('/',function (){
    return view('welcome') ;
 });
 
-/*This was for a lab session*/
+/*This was for a lab session
+    Not required for this project
+*/
 
 /*Go to the fees page*/
 Route::get('/fees',function (){

@@ -43,9 +43,8 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Animals <span class="caret"></span></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">New Animal Specie</a> </li>
+                                    <li><a href="/newanimal">New Animal Specie</a> </li>
                                     <li><a href="#">View Animal Species</a> </li>
-
                                 </ul>
                             </li>
 
