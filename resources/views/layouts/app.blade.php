@@ -44,7 +44,7 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="/newanimal">New Animal Specie</a> </li>
-                                    <li><a href="#">View Animal Species</a> </li>
+                                    <li><a href="/newanimal">View Animal Species</a> </li>
                                 </ul>
                             </li>
 

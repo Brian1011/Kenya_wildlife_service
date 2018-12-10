@@ -9,7 +9,7 @@ class AnimalController extends Controller
 {
     //
     public function index(){
-        $all_animals = animal::all();
+        $all_animals = animal::orderBy('animal_id','desc')->paginate(5);
         return view('kws/newanimal',['animals'=>$all_animals]);
     }
 
@@ -17,7 +17,7 @@ class AnimalController extends Controller
         //validate the data
         $request->validate([
             'animal_name'=>'required|string|min:3',
-            'scientific_name' => 'required|string|min:3'
+            'scientific_name' => 'required|string|min:3|unique:animals'
         ]);
 
         //if okay save to database

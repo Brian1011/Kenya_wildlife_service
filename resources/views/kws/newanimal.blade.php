@@ -10,7 +10,8 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div class="col-md-6 col-md-offset-3">
+
+        <div class="col-md-4">
             <h1 class="center-block text-center">Register New Animal Specie</h1><br><br>
             <!--Check for an error message-->
             @if($errors->any())
@@ -57,6 +58,35 @@
                     <button class="btn btn-lg btn-success center-block" type="submit" >Submit</button>
                 </div>
             </form>
+        </div>
+
+        <!--Display The data-->
+        <div class="col-md-8">
+            <h1 class="center-block text-center">All Registered Animals</h1>
+            <table class="table table-hover table-responsive">
+                <tr>
+                    <th>Species_Id</th>
+                    <th>Animal Name</th>
+                    <th>Scientific Name</th>
+                    <th>Category</th>
+                    <th>Options</th>
+                </tr>
+
+                @foreach($animals as $animal)
+                    <tr>
+                        <td>{{$animal->animal_id}}</td>
+                        <td>{{$animal->animal_name}}</td>
+                        <td>{{$animal->scientific_name}}</td>
+                        <td>{{$animal->category}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-success">Edit</button>
+                            <button class="btn btn-sm btn-danger">Erase</button>
+                        </td>
+                    </tr>
+                @endforeach
+
+                {{$animals->links()}}
+            </table>
         </div>
     </div>
 @endsection
