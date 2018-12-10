@@ -79,15 +79,20 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Kenya Wildlife Service
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/Brian1011/Kenya_wildlife_service">GitHub</a><br><br>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        Created By <b>Maingi Brian Mutinda</b> and <b>Omusisi Harry Wafula</b><br>
+                    </div>
+                    <div class="col-sm-4"></div>
+
                 </div>
             </div>
         </div>

@@ -44,7 +44,8 @@
 
                                 <ul class="dropdown-menu">
                                     <li><a href="#">New Animal Specie</a> </li>
-                                    <li><a href="#">View Animals</a> </li>
+                                    <li><a href="#">View Animal Species</a> </li>
+
                                 </ul>
                             </li>
 
@@ -53,6 +54,14 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Enter Mammal Information</a></li>
                                     <li><a href="#">View Mammals Info</a></li>
+                                    <!--
+                                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-menu-right" style="padding-left: 10px">
+                                                <li><a href="#">Enter Mammal Information</a></li>
+                                                <li><a href="#">View Mammals Info</a></li>
+                                            </ul>
+                                        </li>
+                                    -->
                                 </ul>
                             </li>
                         @endguest
