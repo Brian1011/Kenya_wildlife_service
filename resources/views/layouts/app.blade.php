@@ -51,7 +51,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mammals <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Enter Mammal Information</a></li>
+                                    <li><a href="/newmammal">Enter Mammal Information</a></li>
                                     <li><a href="#">View Mammals Info</a></li>
                                     <!--
                                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>

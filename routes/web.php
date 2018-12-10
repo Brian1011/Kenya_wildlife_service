@@ -15,11 +15,27 @@ Route::get('/newanimal',function (){
     return view('kws/newanimal');
 });
 */
+
+
 Route::get('/newanimal','AnimalController@index');
 Route::post('/animal/save','AnimalController@store');
 Route::get('/',function (){
    return view('welcome') ;
 });
+
+//go to the new mmammal page
+Route::get('/newmammal','MammalController@index');
+
+
+
+
+
+
+
+
+
+
+
 
 /*This was for a lab session
     Not required for this project
