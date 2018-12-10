@@ -63,6 +63,8 @@
                                     -->
                                 </ul>
                             </li>
+
+                            <li><a href="#">Locations</a></li>
                         @endguest
                         &nbsp;
                     </ul>

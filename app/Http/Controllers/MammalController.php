@@ -11,8 +11,9 @@ class MammalController extends Controller
     //
     public function index(){
         //get all mammals
-        $mammal = animal::where('category','=','Mammals')->orderBy('animal_name','desc')->get();
-        $locations = location::orderBy('location_name','desc');
+        $mammal = animal::where('category','=','Mammals')->orderBy('animal_name','asc')->get();
+        $locations = location::orderBy('location_name','asc')->get();
+        //$locations = location::all();
         return view('kws/newmammal',['animals'=>$mammal,'locations'=>$locations]);
     }
 
