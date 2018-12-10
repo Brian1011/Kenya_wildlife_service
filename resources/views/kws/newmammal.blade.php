@@ -36,27 +36,59 @@
                             </div>
                         @endif
 
-                        <form method="post" action="/animal/save" role="form">
+                        <form method="post" action="#" role="form">
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label>Mammal Name</label>
-                                <input type="text" placeholder="Animal Name" name="animal_name" class="form-control" value="{{old('animal_name')}}">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Scientific Name</label>
-                                <input type="text" placeholder="Scientific Name" name="scientific_name" class="form-control" value="{{old('scientific_name')}}">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Animal Name</label>
-                                <select class="form-control" name="animal_category">
-                                    <option value="Mammals">Mammal</option>
-                                    <option value="Birds">Birds</option>
-                                    <option value="Reptiles">Reptiles</option>
-                                    <option value="Fish">Fish</option>
-                                    <option value="Trees">Trees</option>
+                                <select name="mammal_name" class="form-control">
+                                    @foreach($animals as $mammal)
+                                        <option value="{{$mammal->animal_id}}">{{$mammal->animal_name}}</option>
+                                    @endforeach
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Location</label>
+                                <select name="locations" class="form-control">
+                                   @foreach($locations as $location)
+                                        <option value="{{$location->location_id}}">{{$location->location_name}}</option>
+                                   @endforeach
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Year From</label>
+                                        <select name="year_from" class="form-control">
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>Year To</label>
+                                        <select name="year_from" class="form-control">
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Population</label>
+                                <input type="text" class="form-control" name="population">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Status</label>
+                                <input type="text" class="form-control" name="status">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Area(sq.km)</label>
+                                <input type="text" class="form-control" name="area">
                             </div>
 
                             <div class="form-group">
