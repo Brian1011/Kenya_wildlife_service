@@ -97,20 +97,5 @@
                 </div>
             </div>
         </div>
-
-
-        <!--Display The data-->
-        <div class="col-md-6 col-md-offset-3">
-            <h1 class="center-block text-center">All Mammals Info</h1>
-            <table class="table table-hover table-responsive">
-                <tr class="success">
-                    <th>Species_Id</th>
-                    <th>Animal Name</th>
-                    <th>Scientific Name</th>
-                    <th>Category</th>
-                    <th>Options</th>
-                </tr>
-            </table>
-        </div>
     </div>
 @endsection

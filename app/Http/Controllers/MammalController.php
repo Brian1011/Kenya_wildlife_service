@@ -53,6 +53,22 @@ class MammalController extends Controller
 
     public function show(){
         //display mammal info
+        $locate = array();
+        $all_mammals = mammal::orderBy('record_id','desc')->paginate(26);
 
+        //get the names instead of ids that is location_id and animal_id
+        foreach ($all_mammals as $mammal){
+            //get the animal name
+            $animal = animal::where('animal_id','=',$mammal->animal_id)->pluck('animal_name');
+            $mammal['mammal_name'] = $animal[0];
+
+            //get the location name
+            $locate = location::where('location_id','=',$mammal->location_id)->pluck('location_name');
+            //$locate = location::where('location_id','=',$mammal->location_id)->get();
+            $mammal['location']  = $locate;
+            //$mammal['location'] = $locate;
+        }
+
+        return view('kws/all_mammals',['mammals'=>$all_mammals]);
     }
 }

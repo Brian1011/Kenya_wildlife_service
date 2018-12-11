@@ -26,6 +26,9 @@ Route::get('/',function (){
 //save the new mammal
 Route::post('/mammal/save','MammalController@store');
 
+//show all mammals
+Route::get('/allmammals','MammalController@show');
+
 //go to the new mammal page
 Route::get('/newmammal','MammalController@index');
 
