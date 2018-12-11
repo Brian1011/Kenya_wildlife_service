@@ -27,10 +27,8 @@ class AnimalController extends Controller
         $animal->category = request('animal_category');
         $animal->save();
 
-        //get all animals
-        $all_animals = animal::all();
-        return view('kws/newanimal',['animals'=>$all_animals])->with('message','New Animal Has Been added');
-        //return redirect('/newanimal')->with('message','New Animal Has Been added');
+        //return back to the url
+        return back()->with('message','Record has been saved sucessfully');
     }
 
     public function show(){

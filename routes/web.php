@@ -23,6 +23,12 @@ Route::get('/',function (){
    return view('welcome') ;
 });
 
+//Enter new location
+Route::get('/newlocation','LocationController@index');
+
+//save new location
+Route::post('/location/save','LocationController@store');
+
 //save the new mammal
 Route::post('/mammal/save','MammalController@store');
 

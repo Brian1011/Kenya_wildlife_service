@@ -14,7 +14,7 @@
         <div class="col-md-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h1 class="center-block text-center">Register New Animal Location</h1>
+                    <h1 class="center-block text-center">Register New Location</h1>
                 </div>
 
                 <div class="panel-body">
@@ -29,7 +29,6 @@
                         </div>
                     @endif
 
-                <!--Check for a sucess / error message-->
                     @if(session()->has('message'))
                         <div class="alert alert-success">
                             {{session()->get('message')}}
@@ -53,6 +52,16 @@
                             <input type="text" placeholder="Enter Longitude" name="longitude" class="form-control" value="{{old('longitude')}}">
                         </div>
 
+                        <div class="form-group">
+                            <label>Select County</label>
+                            <select class="form-control" name="county">
+                                <option value="Baringo">Baringo</option>
+                                <option value="Bomet">Bomet</option>
+                                <option value="Bungoma">Bungoma</option>
+                                <option value="Busia">Busia</option>
+                                <option value="Nairobi">Nairobi</option>
+                            </select>
+                        </div>
 
                         <div class="form-group">
                             <button class="btn btn-lg btn-primary center-block" type="submit" >Submit</button>
@@ -64,30 +73,32 @@
 
         <!--Display The data-->
         <div class="col-md-8">
-            <h1 class="center-block text-center">All Registered Animals</h1>
+            <h1 class="center-block text-center">All Registered Locations</h1>
             <table class="table table-hover table-responsive">
                 <tr class="success">
-                    <th>Species_Id</th>
-                    <th>Animal Name</th>
-                    <th>Scientific Name</th>
-                    <th>Category</th>
+                    <th>Location Id</th>
+                    <th>Location Name</th>
+                    <th>County</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
                     <th>Options</th>
                 </tr>
 
-                @foreach($animals as $animal)
+                @foreach($locations as $location)
                     <tr>
-                        <td>{{$animal->animal_id}}</td>
-                        <td>{{$animal->animal_name}}</td>
-                        <td>{{$animal->scientific_name}}</td>
-                        <td>{{$animal->category}}</td>
+                        <td>{{$location->location_id}}</td>
+                        <td>{{$location->location_name}}</td>
+                        <td>{{$location->county}}</td>
+                        <td>{{$location->latitude}}</td>
+                        <td>{{$location->longitude}}</td>
                         <td>
-                            <a href="/edit/{{$animal->animal_id}}" class="btn btn-success">Edit</a>
-                            <a href="/delete/{{$animal->animal_id}}" class="btn btn-danger">Delete</a>
+                            <a href="#" class="btn btn-success">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
 
-                {{$animals->links()}}
+                {{$locations->links()}}
             </table>
         </div>
     </div>
