@@ -36,7 +36,7 @@
                             </div>
                         @endif
 
-                        <form method="post" action="#" role="form">
+                        <form method="post" action="/mammal/save" role="form">
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label>Mammal Name</label>
@@ -61,16 +61,18 @@
                                     <div class="col-md-6">
                                         <label>Year From</label>
                                         <select name="year_from" class="form-control">
-                                            <option>2010</option>
-                                            <option>2011</option>
+                                            @foreach($years as $year)
+                                                <option value="{{$year}}">{{$year}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
                                     <div class="col-md-6">
                                         <label>Year To</label>
-                                        <select name="year_from" class="form-control">
-                                            <option>2010</option>
-                                            <option>2011</option>
+                                        <select name="year_to" class="form-control">
+                                            @foreach($years as $year)
+                                                <option value="{{$year}}">{{$year}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -78,17 +80,12 @@
 
                             <div class="form-group">
                                 <label>Population</label>
-                                <input type="text" class="form-control" name="population">
+                                <input type="text" class="form-control" name="population" value="{{old('population')}}" placeholder="Total Population In numbers" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Status</label>
-                                <input type="text" class="form-control" name="status">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Area(sq.km)</label>
-                                <input type="text" class="form-control" name="area">
+                                <input type="text" class="form-control" name="status" value="{{old('status')}}" placeholder="Status e.g increasing" required>
                             </div>
 
                             <div class="form-group">

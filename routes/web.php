@@ -23,10 +23,17 @@ Route::get('/',function (){
    return view('welcome') ;
 });
 
-//go to the new mmammal page
+//save the new mammal
+Route::post('/mammal/save','MammalController@store');
+
+//go to the new mammal page
 Route::get('/newmammal','MammalController@index');
 
+//edit animal information
+Route::get('/edit/{id}','AnimalController@index');
 
+//Delete animal information
+Route::get('/delete/{id}','AnimalController@index');
 
 
 

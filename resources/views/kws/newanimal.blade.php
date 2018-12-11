@@ -87,8 +87,8 @@
                         <td>{{$animal->scientific_name}}</td>
                         <td>{{$animal->category}}</td>
                         <td>
-                            <button class="btn btn-sm btn-success">Edit</button>
-                            <button class="btn btn-sm btn-danger">Erase</button>
+                            <a href="/edit/{{$animal->animal_id}}" class="btn btn-success">Edit</a>
+                            <a href="/delete/{{$animal->animal_id}}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
